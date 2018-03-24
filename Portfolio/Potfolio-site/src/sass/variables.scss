@@ -1,0 +1,18 @@
+$main:'Raleway',Arial, sans-serif;
+
+
+@mixin font($font-family, $font-size, $font-weight, $line-height) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// colors
+
+$white: #ffffff;
+$yellow: #fbe287cf;
+$pink: #f38181cf;
+$dark: #333333;
+$grey: #999999;
+$aqua: #95e1d3;
