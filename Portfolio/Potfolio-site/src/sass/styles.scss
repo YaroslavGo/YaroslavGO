@@ -28,16 +28,15 @@
 .header__text,
 .header__title,
 .works__title,
-.header__decoration{
+.header__decoration,
+.contacts__title{
     display: block;
     color:black;
     text-align: center;   
 }
 
 .header__text{
-    @include font($main, 50px, 400, 100px);
-    
-    
+    @include font($main, 50px, 400, 100px); 
 }
 
 .header__title{
@@ -46,8 +45,9 @@
     animation-name: flash;
     animation-duration: 3s;
     animation-fill-mode: both;
-    animation-iteration-count: infinite;
     animation-iteration-count:1;
+    animation-delay: 2s;
+
     @keyframes flash {
         from,
         50%,
@@ -95,7 +95,8 @@
 //     }
 
 
-.works__title{
+.works__title,
+.contacts__title{
     @include font($main, 55px, 500, 70px);
     text-transform: uppercase;
     margin-bottom: 50px;
@@ -170,13 +171,19 @@
 
 // -------SOCIAL------------------------------------
 
+.contacts{
+    padding: 40px 0;
+}
 
+
+.contacts__title{
+    margin-bottom: 50px;
+}
   
 .social-icons {
     display: inline-block;
     display: flex;
-    justify-content: center;
-    padding: 40px 0;
+    justify-content: center; 
 }
   
 .social-icons {
@@ -192,8 +199,8 @@
       padding: 15px 20px;
   
       &:hover {
-        fill: black;
-        background-color: red;
+        fill: white;
+        background-color: grey;
       }
     }
 }
