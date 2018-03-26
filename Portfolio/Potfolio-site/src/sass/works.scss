@@ -1,0 +1,135 @@
+
+// -------MAiN-------------------
+
+.main-wrapper{
+  background-color: #fff;
+}
+
+.works{
+  padding: 100px 0;
+}
+
+
+.works__title,
+.contacts__title{
+  @include font($main, 30px, 500, 40px);
+  text-transform: uppercase;
+  margin-bottom: 50px;
+
+  &::after{
+    content: "";
+    display: block;
+    width: 20%;
+    height: 3px;
+    background-color: rgb(7, 2, 2);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+  }
+}
+
+.works__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.works__list-item{
+  flex-basis: 80%;
+  height: 200px;
+    
+  &:not(:last-child){
+    margin-bottom: 50px;
+  }
+}
+
+.works__list-link{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid rgba(200, 200, 200,0.8);    
+}
+
+.bg1, .bg2, .bg3, .bg4, .bg5{        
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: rgba(200, 200, 200, 1);
+  transition: background-color 0.8s linear; 
+}
+
+.bg1{    
+  background-image: url(../img/1-min.jpg);       
+}
+
+.bg2{
+  background-image: url(../img/2-min.jpg);
+}
+
+.bg3{
+  background-image: url(../img/3-min.jpg);
+}
+
+.bg4{
+  background-image: url(../img/4-min.jpg);
+}
+
+.bg5{
+  background-image: url(../img/5-min.jpg);
+}
+
+.bg1:hover, .bg2:hover, .bg3:hover, .bg4:hover, .bg5:hover{    
+  background-color: rgba(200, 200, 200, 0); 
+}
+// -----MEDIA------------------------
+
+@media (min-width:640px){
+  .works{
+    padding: 70px 0;
+  }
+
+  .works__title,
+  .contacts__title{
+    @include font($main, 40px, 500, 50px);
+    margin-bottom: 40px;
+
+    &::after{    
+      margin-top: 20px;
+    }
+  }
+
+  .works__list-item{
+    flex-basis: 47%;
+    height: 250px;
+      
+    &:not(:last-child){
+      margin-bottom: 50px;
+    }
+  }
+}
+  
+@media (min-width:1200px){
+  .works{
+    padding: 100px 0;
+  }
+  
+  .works__title,
+  .contacts__title{
+    margin-bottom: 50px;
+
+    &::after{    
+      margin-top: 25px;
+    }
+  }
+
+  .works__list-item{
+    flex-basis: 31%;
+    height: 320px;
+      
+    &:nth-of-type(-n+3){
+      margin-bottom: 50px;
+    }
+  }
+}

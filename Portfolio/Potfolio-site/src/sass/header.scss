@@ -75,7 +75,7 @@
   content: "";
   display: block;
   width: 20%;
-  height: 2px;
+  height: 3px;
   background-color: #fff;
   margin-left: auto;
   margin-right: auto;
@@ -83,7 +83,7 @@
 
 // -------MEADIA---------
 
-@media (min-width:640px) and (max-width:1200px) {
+@media (min-width:640px){
   .container{
     width: 640px;   
   } 
@@ -109,23 +109,15 @@
 }
 
 
-@media (min-width:1200px) and (max-width:1400px) {
+@media (min-width:1200px){
   .container{
-    width: 1200px;   
+    width: 900px;   
   } 
 
   .header__photo{
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border: 7px solid white;
     margin-bottom: 30px;
-  }
-
-  .header__text{
-    @include font($main, 45px, 400, 80px); 
-  }
-  
-  .header__title{
-    @include font($main, 70px, 700, 80px);      
-  }    
+  }  
 }
