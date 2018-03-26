@@ -5,7 +5,7 @@
 .masthead-wrapper{
     width: 100vw;
     height:100vh;
-    background-image: url(../img/pexels-photo-691582-min.jpeg);
+    background-image: url(../img/bg-photo.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,7 +16,7 @@
 
 .container{
     margin: auto;
-    width: 1900px;
+    width: 1400px;
     height:auto;    
 }
 
@@ -36,11 +36,11 @@
 }
 
 .header__text{
-    @include font($main, 50px, 400, 100px); 
+    @include font($main, 45px, 400, 80px); 
 }
 
 .header__title{
-    @include font($main, 90px, 700, 100px);
+    @include font($main, 70px, 700, 80px);
     text-transform: uppercase;
     animation-name: flash;
     animation-duration: 3s;
