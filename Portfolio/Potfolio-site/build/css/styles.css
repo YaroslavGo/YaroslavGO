@@ -318,8 +318,10 @@ template {
 }
 
 .works__list-item {
+	position: relative;
 	flex-basis: 80%;
 	height: 200px;
+	border-radius: 10px;
 }
 
 .works__list-item:not(:last-child) {
@@ -368,11 +370,47 @@ template {
 }
 
 .bg1:hover,
-.bg2:hover,
 .bg3:hover,
 .bg4:hover,
 .bg5:hover {
 	background-color: rgba(200, 200, 200, 0);
+}
+
+.repair-text {
+	position: relative;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	margin-bottom: auto;
+	margin-top: auto;
+	background-color: rgba(200, 0, 0, 0.6);
+	transition: opacity 0.8s linear;
+	font-family: "Raleway", Arial, sans-serif;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 30px;
+	text-transform: uppercase;
+	padding-top: 60px;
+}
+
+.repair-text::after {
+	position: absolute;
+	content: url(../img/repair-icon.svg);
+	width: 50px;
+	height: 50px;
+	top: 60%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.repair-text:hover {
+	opacity: 1;
 }
 
 .contacts {
@@ -398,7 +436,7 @@ template {
 	border-radius: 50%;
 	border: 1px solid grey;
 	fill: grey;
-	padding: 10px 15px;
+	padding: 10px 12px;
 }
 
 .social-icons__facebook:hover,
@@ -472,6 +510,20 @@ template {
 	margin-bottom: 50px;
 }
 
+.repair-text {
+	font-family: "Raleway", Arial, sans-serif;
+	font-size: 50px;
+	font-weight: 700;
+	line-height: 60px;
+}
+
+.repair-text::after {
+	width: 70px;
+	height: 70px;
+	top: 60%;
+	left: 50%;
+}
+
 .contacts {
 	padding: 30px 0;
 }
@@ -485,7 +537,7 @@ template {
 .social-icons__pinterest,
 .social-icons__instagram,
 .social-icons__github {
-	padding: 15px 20px;
+	padding: 15px 18px;
 }
 
 .social-icon:not(:last-child) {
@@ -497,7 +549,7 @@ template {
 @media (min-width: 1200px) {
 
 .container {
-	width: 900px;
+	width: 1200px;
 }
 
 .header__photo {
@@ -528,6 +580,19 @@ template {
 
 .works__list-item:nth-of-type(-n+3) {
 	margin-bottom: 50px;
+}
+
+.repair-text {
+	font-family: "Raleway", Arial, sans-serif;
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 50px;
+	padding-top: 60px;
+}
+
+.repair-text::after {
+	width: 80px;
+	height: 80px;
 }
 
 .contacts {
