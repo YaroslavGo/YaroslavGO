@@ -7,6 +7,21 @@
 
 .works{
   padding: 100px 0;
+  position: relative;
+}
+
+.works__absolute-text{
+  position: absolute;
+  display: block;
+  color: rgba(56, 52, 74, 0.1);
+  transform: rotate(90deg);
+  width: 940px;
+  word-spacing: 8px;
+  font-weight: 700;
+  line-height: 70px;
+  top: 50%;
+  left: -35%;
+  @include font($main, 70px, 700, 70px);
 }
 
 
@@ -39,10 +54,24 @@
   flex-basis: 80%;
   height: 200px;
   border-radius: 10px;
+  z-index: 1;
     
   &:not(:last-child){
     margin-bottom: 50px;
   }
+}
+
+.circle::before{
+  position: absolute;
+  display: block;
+  content: '';
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(0, 157, 217, 0.1);
+  top: -50%;
+  left: -50%;
+  z-index: -1;
 }
 
 .works__list-link{
@@ -53,7 +82,7 @@
   border: 2px solid rgba(200, 200, 200,0.8);    
 }
 
-.bg1, .bg2, .bg3, .bg4, .bg5{        
+.bg1, .bg2, .bg3, .bg4, .bg5, .bg6{        
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -67,7 +96,7 @@
 }
 
 .bg2{
-  background-image: url(../img/2-min.jpg);
+  background-image: url(../img/6.jpg);
 }
 
 .bg3{
@@ -80,6 +109,10 @@
 
 .bg5{
   background-image: url(../img/5-min.jpg);
+}
+
+.bg6{  
+  background-image: url(../img/2-min.jpg);
 }
 
 .bg1:hover, .bg3:hover, .bg4:hover, .bg5:hover{    
@@ -126,6 +159,12 @@
     padding: 70px 0;
   }
 
+  .works__absolute-text{
+    top: 53%;
+    left: 28%
+  }
+  
+
   .works__title,
   .contacts__title{
     @include font($main, 40px, 500, 50px);
@@ -143,6 +182,13 @@
     &:not(:last-child){
       margin-bottom: 50px;
     }
+  }
+
+  .circle::before{
+    width: 150px;
+    height: 150px;
+    top: -25%;
+    left: -25%;
   }
 
   .repair-text{
@@ -180,6 +226,11 @@
     }
   }
 
+  .circle::before{
+    top: -20%;
+    left: -20%;
+  }
+
   .repair-text{
     @include font($main, 40px, 700, 50px);
     padding-top: 60px; 
@@ -188,5 +239,11 @@
       width: 80px;
       height: 80px;
     }
+  }
+
+  .works__absolute-text{
+    top: 62%;
+    left: 62%;
+    font-size: 56px;
   }
 }
