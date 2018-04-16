@@ -847,7 +847,7 @@ template {
 .section-banner__text::after {
 	content: url(../img/arrow-right-1.png);
 	top: 40px;
-	left: 246px;
+	left: 230px;
 }
 
 .section-video__container {
@@ -866,7 +866,7 @@ template {
 
 .section-video__title::after {
 	top: -2px;
-	left: 172px;
+	left: 146px;
 }
 
 .section-video__list {
@@ -2540,7 +2540,7 @@ template {
 }
 
 .contacts__text {
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .contacts__social-icons {
