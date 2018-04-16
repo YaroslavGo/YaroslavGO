@@ -1,0 +1,116 @@
+.section-banner__wrapper{
+  background-image: url(../img/banner-bg-min.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-banner__container{
+  padding: 40px 0;
+}
+
+.section-banner__text{
+  display: block;
+  font-size: 14px;
+  line-height: 36px;
+  font-family: $medium;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+
+  &::before{
+    content: url(../img/arrow-left-1.png);
+    top: 40px;
+    left: 5px;  
+  }
+
+  &::after{
+    content: url(../img/arrow-right-1.png);
+    top: 40px;
+    left: 246px;
+  }
+} 
+
+@media (min-width: 576px) {
+  .section-banner__container{
+    padding: 46px 0;
+  }
+  
+  .section-banner__text{
+    font-size: 26px;
+    line-height: 44px;
+  
+    &::before{
+      top: 45px;
+      left: 45px;  
+    }
+  
+    &::after{
+      top: 44px;
+      left: 323px;
+    }
+  } 
+}
+
+@media (min-width: 768px) {
+  .section-banner__container{
+    padding: 56px 0;
+  }
+  
+  .section-banner__text{
+    line-height: 44px;
+    font-size: 30px;
+  
+    &::before{
+      top: 44px;
+      left: 104px; 
+    }
+  
+    &::after{
+      top: 44px;
+      left: 422px;
+    }
+  }  
+}
+
+@media (min-width: 992px) {
+  .section-banner__container{
+    padding: 60px 0;
+  }
+  
+  .section-banner__text{
+    font-size: 44px;
+    line-height: 56px;
+  
+    &::before{
+      top: 50px;
+      left: 150px;  
+    }
+  
+    &::after{
+      top: 50px;
+      left: 568px;
+    }
+  }  
+}
+
+@media (min-width: 1200px) {  
+  .section-banner__container{
+    min-height: 270px;
+    padding: 74px 0;
+  }
+  
+  .section-banner__text{
+    font-size: 50px;
+  
+    &::before{
+      top: 50px;
+      left: 202px;  
+    }
+  
+    &::after{
+      top: 50px;
+      left: 688px;
+    }
+  }  
+}
